@@ -1,0 +1,29 @@
+
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/linearLayout1"
+	android:layout_height="fill_parent"
+	android:layout_width="match_parent"
+	android:orientation="horizontal"
+	android:weightSum="5">
+	<LinearLayout
+		android:layout_height="match_parent"
+		android:id="@+id/linearLayout2"
+		android:layout_weight="4"
+		android:orientation="vertical" android:layout_width="wrap_content">
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="TextView"
+			android:id="@+id/serviceprovider_name"
+			android:layout_width="match_parent"></TextView>
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="TextView"
+			android:id="@+id/serviceprovider_address"
+			android:layout_width="match_parent"></TextView>
+	</LinearLayout>
+	<Button
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:text="Call" android:id="@+id/callButton" android:layout_width="wrap_content"></Button>
+</LinearLayout>
