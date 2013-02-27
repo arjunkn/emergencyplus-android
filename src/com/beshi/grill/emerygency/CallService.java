@@ -73,7 +73,6 @@ public class CallService extends Activity implements OnClickListener {
 		}
 	}
 
-	@Override
 	public void onClick(View v) {
 		String numb = (String) v.getTag();
 		Intent callIntent = new Intent(Intent.ACTION_CALL);

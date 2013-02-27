@@ -9,7 +9,7 @@
 	<LinearLayout
 		android:layout_height="match_parent"
 		android:id="@+id/linearLayout2"
-		android:layout_weight="4"
+		android:layout_weight="5"
 		android:orientation="vertical" android:layout_width="wrap_content">
 		<TextView
 			android:layout_height="wrap_content"
@@ -22,8 +22,12 @@
 			android:id="@+id/serviceprovider_address"
 			android:layout_width="match_parent"></TextView>
 	</LinearLayout>
-	<Button
-		android:layout_weight="1"
-		android:layout_height="wrap_content"
-		android:text="Call" android:id="@+id/callButton" android:layout_width="wrap_content"></Button>
+
+	<ImageButton
+	    android:id="@+id/callButton"
+	    android:layout_width="50dp"
+	    android:layout_height="53dp"
+	    android:background = "@drawable/roundedbutton"
+	    android:src="@drawable/callbutton" />
+
 </LinearLayout>

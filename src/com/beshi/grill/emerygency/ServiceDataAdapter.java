@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,7 +37,9 @@ public class ServiceDataAdapter extends ArrayAdapter<ServiceData> implements
 				.findViewById(R.id.serviceprovider_name);
 		TextView address = (TextView) rowView
 				.findViewById(R.id.serviceprovider_address);
-		Button callButton = (Button) rowView.findViewById(R.id.callButton);
+		final ImageButton callButton = (ImageButton) rowView
+				.findViewById(R.id.callButton);
+		callButton.setBackgroundResource(R.drawable.callbutton);
 		callButton.setTag(data[position].getTelephone());
 		callButton.setOnClickListener(this);
 
@@ -46,7 +49,6 @@ public class ServiceDataAdapter extends ArrayAdapter<ServiceData> implements
 		return rowView;
 	}
 
-	@Override
 	public void onClick(View v) {
 		int id = v.getId();
 
@@ -54,7 +56,7 @@ public class ServiceDataAdapter extends ArrayAdapter<ServiceData> implements
 		case R.id.callButton:
 
 			String numbers = (String) v.getTag();
-			//Toast.makeText(context, numbers, Toast.LENGTH_LONG).show();
+			Toast.makeText(context, numbers, Toast.LENGTH_LONG).show();
 			makeCall(numbers);
 			break;
 
@@ -62,11 +64,13 @@ public class ServiceDataAdapter extends ArrayAdapter<ServiceData> implements
 			break;
 		}
 	}
-	
-	private void makeCall(String numb){
-		Intent callIntent = new Intent(context,CallService.class);
+
+	private void makeCall(String numb) {
+		Intent callIntent = new Intent(context, CallService.class);
 		callIntent.putExtra("numbers", numb);
 		context.startActivity(callIntent);
 	}
+	
+	
 
 }

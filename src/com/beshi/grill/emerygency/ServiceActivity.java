@@ -43,7 +43,7 @@ public class ServiceActivity extends Activity implements PostAsyncUser {
 
 	public void getResultsFromServer() throws Exception {
 		JSONObject ob = new JSONObject();
-		ob.put("url", "http://10.0.2.2/EmergencyService/GetInfo.php");
+		ob.put("url", "http://emergencyplus.net23.net/GetInfo.php");
 
 		JSONArray arr = new JSONArray();
 
@@ -64,7 +64,6 @@ public class ServiceActivity extends Activity implements PostAsyncUser {
 		lv.setAdapter(adapter);
 	}
 
-	@Override
 	public void getResult(String resp) {
 		if (resp.length() != 0) {
 
